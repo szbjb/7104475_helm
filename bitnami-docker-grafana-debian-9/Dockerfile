@@ -13,7 +13,7 @@ COPY rootfs /
 COPY grafana-piechart-panel/  /opt/grafana-piechart-panel
 COPY  grafana.db  /opt/grafana.db
 ENV BITNAMI_APP_NAME="grafana" \
-    BITNAMI_IMAGE_VERSION="6.3.5-debian-9-r12" \
+    BITNAMI_IMAGE_VERSION="6.4.3-debian-9-r14" \
     PATH="/opt/bitnami/grafana/bin:$PATH"
 
 EXPOSE 3000
