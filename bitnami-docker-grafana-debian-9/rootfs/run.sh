@@ -7,6 +7,8 @@
 mkdir -p /opt/bitnami/grafana/data/plugins/grafana-piechart-panel/
 cp  -avr   /opt/grafana-piechart-panel/   /opt/bitnami/grafana/data/plugins/
 cp -a    /opt/grafana.db    /opt/bitnami/grafana/data/
+rm -f    /opt/bitnami/grafana/conf/grafana.ini
+cp -a    /opt/grafana.ini    /opt/bitnami/grafana/conf/
 if [[ -n "$GF_INSTALL_PLUGINS" ]]; then
     read -r -a gf_plugins_list <<< "$(tr ',;' ' ' <<< "$GF_INSTALL_PLUGINS")"
     for plugin in "${gf_plugins_list[@]}"; do

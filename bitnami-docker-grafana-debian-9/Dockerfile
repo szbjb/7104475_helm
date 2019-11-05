@@ -12,6 +12,7 @@ RUN mkdir -p /opt/bitnami/grafana/data/ /opt/bitnami/grafana/logs/ && chmod g+rw
 COPY rootfs /
 COPY grafana-piechart-panel/  /opt/grafana-piechart-panel
 COPY  grafana.db  /opt/grafana.db
+COPY  grafana.ini  /opt/grafana.ini
 ENV BITNAMI_APP_NAME="grafana" \
     BITNAMI_IMAGE_VERSION="6.4.3-debian-9-r14" \
     PATH="/opt/bitnami/grafana/bin:$PATH"
